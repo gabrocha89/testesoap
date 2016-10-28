@@ -1,0 +1,20 @@
+<xs:schema xmlns:tns="http://soap.servicos.grocha.com.br/" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://soap.servicos.grocha.com.br/">
+  <xs:element name="testeSoap" type="tns:testeSoap"/>
+  <xs:element name="testeSoapResponse" type="tns:testeSoapResponse"/>
+  <xs:complexType name="testeSoap">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nome" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="testeSoapResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Exception" type="tns:Exception"/>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
